@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sign Up</title>
+        <link rel="stylesheet" href="signup.css" />
+    </head>
+    <body>
+        <h1 class="title">Sign Up to Our Website</h1>
+
+        <!-- Request Methods: GET, POST, PUT, PATCH, DELETE -->
+        <!-- A form element allows users to enter and submit data -->
+        <form id="signup-form" class="form" method="get">
+            <!-- Username -->
+            <div class="form-item">
+                <label>Username</label>
+                <input type="text" placeholder="Enter your username..." />
+            </div>
+
+            <!-- Email -->
+            <div class="form-item">
+                <label>Email</label>
+                <input type="email" placeholder="Enter your email..." />
+            </div>
+
+            <!-- Phone Number -->
+            <div class="form-item">
+                <label>Phone number</label>
+                <input type="tel" placeholder="Enter your phone number..." />
+            </div>
+
+            <!-- Date Of Birth -->
+            <div class="form-item">
+                <label>Date of birth</label>
+                <input type="date" placeholder="Enter date of birth..." />
+            </div>
+
+            <div class="form-item">
+                <label>Date of birth</label>
+                <input type="datetime-local" placeholder="Enter date of birth..." />
+            </div>
+
+            <!-- Bio -->
+            <div class="form-item">
+                <label>Bio</label>
+                <textarea placeholder="Enter bio..." rows="5"></textarea>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-send"
+                >
+                    <path
+                        d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
+                    />
+                    <path d="m21.854 2.147-10.94 10.939" />
+                </svg>
+                Sign Up
+            </button>
+        </form>
+    </body>
+</html>

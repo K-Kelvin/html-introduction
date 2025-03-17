@@ -1,0 +1,32 @@
+/* Reset browser defaults */
+* {
+    color: gray;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    color: red;
+    font-size: 32px;
+}
+
+h1.title,
+h2.title,
+h3.title,
+h4.title,
+h5.title,
+h6.title {
+    text-align: center;
+}
+
+.blue {
+    color: blue;
+}
+
+.large {
+    font-size: 32px;
+}

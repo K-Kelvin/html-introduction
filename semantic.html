@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Semantic HTML</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            nav,
+            section,
+            footer {
+                max-width: 768px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            section {
+                margin-bottom: 10rem;
+            }
+        </style>
+    </head>
+    <body>
+        <header style="background-color: teal">
+            <nav style="color: white; padding: 8px 32px">
+                <a href="#section1">One</a>
+                <a href="#section2">Two</a>
+                <a href="#section3">Three</a>
+                <a href="#section4">Four</a>
+                <a href="#footer">Footer</a>
+            </nav>
+        </header>
+
+        <marquee behavior="alternate">This text will scroll from right to left</marquee>
+
+        <aside>
+            <nav></nav>
+        </aside>
+
+        <main>
+            <section id="section1">
+                <h1>Semantic HTML</h1>
+                <p>
+                    Semantic HTML refers to the use of HTML tags that convey the meaning
+                    and structure of the content. These tags, such as header, footer,
+                    article, and section, provide better accessibility, improved SEO,
+                    and easier maintenance of the code by clearly defining the different
+                    parts of a webpage.
+                </p>
+            </section>
+
+            <section id="section2">
+                <h1>Section 2</h1>
+                <p>
+                    Semantic HTML refers to the use of HTML tags that convey the meaning
+                    and structure of the content. These tags, such as header, footer,
+                    article, and section, provide better accessibility, improved SEO,
+                    and easier maintenance of the code by clearly defining the different
+                    parts of a webpage.
+                </p>
+            </section>
+
+            <section id="section3">
+                <h2>Contact Us</h2>
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required /><br /><br />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required /><br /><br />
+
+                    <label for="message">Message:</label><br />
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="4"
+                        cols="50"
+                        required
+                    ></textarea
+                    ><br /><br />
+
+                    <input type="submit" value="Submit" />
+                </form>
+            </section>
+
+            <section id="section4">
+                <h1>Section 4</h1>
+                <p>
+                    Semantic HTML refers to the use of HTML tags that convey the meaning
+                    and structure of the content. These tags, such as header, footer,
+                    article, and section, provide better accessibility, improved SEO,
+                    and easier maintenance of the code by clearly defining the different
+                    parts of a webpage.
+                </p>
+            </section>
+        </main>
+
+        <div style="background-color: teal; color: white">
+            <footer style="padding: 3rem 0" id="footer">
+                <p>&copy; 2025 My Website. All rights reserved.</p>
+                <nav>
+                    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
+                    <a href="contact.html">Contact</a>
+                </nav>
+            </footer>
+        </div>
+    </body>
+</html>

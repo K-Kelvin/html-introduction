@@ -11,40 +11,66 @@
 
         <!-- Request Methods: GET, POST, PUT, PATCH, DELETE -->
         <!-- A form element allows users to enter and submit data -->
-        <form id="signup-form" class="form" method="get">
+        <form id="signup-form" class="form" method="post">
             <!-- Username -->
             <div class="form-item">
                 <label>Username</label>
-                <input type="text" placeholder="Enter your username..." />
+                <input
+                    type="text"
+                    name="username"
+                    placeholder="Enter your username..."
+                    required
+                />
             </div>
 
             <!-- Email -->
             <div class="form-item">
                 <label>Email</label>
-                <input type="email" placeholder="Enter your email..." />
+                <input type="email" name="email" placeholder="Enter your email..." required />
             </div>
 
             <!-- Phone Number -->
             <div class="form-item">
                 <label>Phone number</label>
-                <input type="tel" placeholder="Enter your phone number..." />
+                <input
+                    type="tel"
+                    name="phone_number"
+                    placeholder="Enter your phone number..."
+                />
             </div>
 
             <!-- Date Of Birth -->
             <div class="form-item">
                 <label>Date of birth</label>
-                <input type="date" placeholder="Enter date of birth..." />
+                <input
+                    type="date"
+                    name="date_of_birth"
+                    placeholder="Enter date of birth..."
+                />
             </div>
 
             <div class="form-item">
-                <label>Date of birth</label>
-                <input type="datetime-local" placeholder="Enter date of birth..." />
+                <label>Date and time of birth</label>
+                <input
+                    type="datetime-local"
+                    name="date_of_birth_local"
+                    placeholder="Enter date of birth..."
+                />
+            </div>
+
+            <div class="form-item">
+                <label>Gender</label>
+                <select name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
             </div>
 
             <!-- Bio -->
             <div class="form-item">
                 <label>Bio</label>
-                <textarea placeholder="Enter bio..." rows="5"></textarea>
+                <textarea name="bio" placeholder="Enter bio..." rows="5"></textarea>
             </div>
 
             <!-- Submit button -->
@@ -69,5 +95,25 @@
                 Sign Up
             </button>
         </form>
+
+
+        <script>
+            const form = document.getElementById("signup-form");
+            form.onclick = function (e) {
+                e.preventDefault(); // prevents default behaviour on form submission (refresh the page)
+                const formData = new FormData(e.currentTarget);
+
+                const data = {};
+                for (let [key, value] of formData.entries()) {
+                    data[key] = value;
+                    console.log(`${key}="${value}"`)
+                }
+
+                // fetch("", {
+                //     method: "POST",
+                //     body: JSON.stringify(data),
+                // })
+            }
+        </script>
     </body>
 </html>

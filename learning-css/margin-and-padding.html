@@ -3,8 +3,25 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
         <title>Margin and Padding</title>
         <style>
+            * {
+                /* assigning widths and heights will mean that that is the total width and height */
+                box-sizing: border-box;
+
+                /* assigning widths and heights will mean that that is NOT the total width and height */
+                /* box-sizing: content-box; */
+            }
+
+            html,
+            body {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
             .parent {
                 background-color: aqua;
             }
@@ -34,12 +51,38 @@
             /* .parent .child ~ .child {
                 background-color: blue;
             } */
+
+            /* Centering an element using margin auto */
+            .parent .child:first-child {
+                width: 50%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .box {
+                background-color: chocolate;
+                margin-top: 32px;
+                padding: 12px;
+            }
+
+            .container {
+                width: 100%;
+                max-width: 1024px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .ellipsis {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         </style>
     </head>
     <body>
-        <h1>Margin and Padding</h1>
+        <h1 class="container">Margin and Padding</h1>
 
-        <div class="parent">
+        <div class="parent container">
             <div class="child">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
                 saepe! Temporibus nisi beatae omnis vero?
@@ -57,5 +100,55 @@
                 saepe! Temporibus nisi beatae omnis vero?
             </div>
         </div>
+
+        <div
+            class="box container"
+            style="
+                width: 100%;
+                max-width: 400px;
+                height: auto;
+                overflow: auto;
+                outline: 2px solid black;
+                outline-offset: 4px;
+            "
+        >
+            <h2 style="margin-top: 0">Box</h2>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint quisquam
+            ratione adipisci? Saepe consectetur ratione molestias amet quod corporis
+            ducimus dolores ad odit accusantium consequuntur, molestiae at neque quam
+            nobis modi necessitatibus possimus sit ab similique animi numquam
+            voluptates. Dignissimos!
+
+            <div style="background-color: red; width: 50%; color: white">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit maiores
+                ipsa minus quisquam labore impedit officiis nemo nam laborum
+                necessitatibus!
+            </div>
+        </div>
+
+        <!-- class="ellipsis" -->
+        <p
+            style="
+                background-color: bisque;
+                padding: 8px;
+                margin-top: 20px;
+                text-align: justify;
+                text-align-last: center;
+                text-decoration: underline red wavy 2px;
+                text-transform: capitalize;
+                text-indent: 50px;
+                line-height: 1.8;
+                letter-spacing: 2px;
+                word-spacing: 5px;
+                text-shadow: 2px 2px 5px green;
+            "
+        >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem maxime illo
+            alias dolor quia atque id rem incidunt repellendus harum quod perferendis
+            adipisci praesentium deserunt, nisi laborum neque, culpa expedita cupiditate
+            accusantium, nihil veniam? Perferendis aut dolor excepturi, pariatur
+            officiis praesentium autem quo temporibus corrupti laborum, voluptatum
+            tempora necessitatibus voluptas!
+        </p>
     </body>
 </html>

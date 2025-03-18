@@ -1,0 +1,133 @@
+/* External CSS */
+
+/* selector { declaration } */
+/* { property: value; }  */
+h1 {
+    font-size: 56px;
+}
+
+/* Selectors: id, class, html element name */
+h1 {
+    font-size: 56px;
+} /* html tag */
+.some-class {
+    background: gray;
+}
+#element-id {
+    color: red;
+}
+
+/* Combinations */
+h2.some-class {
+    font-size: 40px;
+}
+
+input[type="date"] {
+    width: 100%;
+}
+[type="date"] {
+    width: 100%;
+}
+
+/* Universal Selector */
+* {
+    box-sizing: border-box;
+}
+
+/* Grouping Selector */
+h1,
+h2 {
+    color: red;
+}
+
+.container {
+    padding: 20px;
+}
+
+.container {
+    background-color: wheat;
+    padding: 8px;
+}
+
+.container > p {
+    background-color: /* Inline comment */ green;
+}
+
+#paragraph1 > * {
+    background-color: red; /* Inline Comment */
+}
+
+/* 
+Multiple
+Line
+Comment
+*/
+
+/* Colors */
+.color {
+    font-size: 40px;
+}
+.color.predefined {
+    color: darkorange;
+}
+
+/* 0 - 255 */
+.color.rgb {
+    /* color: rgb(0, 0, 0); */ /* black */
+    color: rgb(255, 255, 255); /* white */
+    background: black;
+}
+
+.color.rgba {
+    /* color: rgb(255, 0, 0);
+    color: rgb(0, 0, 255);
+    color: rgb(0, 255, 0); */
+    color: rgba(200, 23, 179, 0.75);
+}
+
+/* Hexadecimal value colors */
+
+/* Decimal(10) -> 0 - 9  104 879 */
+/* Hexadecimal(16) -> 0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F */
+/* HEX -> #RRGGBB */
+.color.hex {
+    color: #fff;
+    background: #000;
+}
+
+/* HSL value -> (Hue, Saturation, Lightness */
+.color.hsl {
+    color: hsl(336, 64%, 9%);
+}
+
+button.btn {
+    font-size: 20px;
+    padding: 8px 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: hsl(0, 59%, 41%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button.btn:hover {
+    background-color: hsl(0, 59%, 51%);
+}
+
+body {
+    min-height: 100vh;
+    /* background-color: aqua; */
+    /* background-image: url(./images/engineer.png); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* background-size: contain; */
+    /* background-attachment: fixed; */
+
+    /* Background Shorthand: background-color background-image background-repeat background-attachment background-position */
+    background: aqua url(./images/engineer.png) no-repeat fixed center;
+    background-size: cover;
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS Borders</title>
+
+        <style>
+            body {
+                padding: 20px;
+            }
+            div {
+                padding: 8px;
+                margin-bottom: 20px;
+            }
+            .border.dotted {
+                border-style: dotted;
+            }
+            .border.dashed {
+                border-style: dashed;
+            }
+            .border.solid {
+                color: brown;
+                border-style: solid;
+                /* padding-top: 40px;
+                padding-right: 40px;
+                padding-bottom: 40px;
+                padding-left: 20px; */
+                /* Padding Shorthand: all */
+                /* padding: 40px; */
+                
+                /* Padding Shorthand: top-bottom, left-right */
+                padding: 10px 40px;
+
+                /* Padding Shorthand: top, right, bottom, left */
+                padding: 1px 10px 20px 30px;
+            }
+            .border.double {
+                border-style: double;
+            }
+            .border.groove {
+                border-style: groove;
+            }
+            .border.ridge {
+                border-style: ridge;
+            }
+            .border.inset {
+                border-style: inset;
+            }
+            .border.outset {
+                border-style: outset;
+            }
+            .border.solid {
+                border-width: 1px 2px 4px 8px;
+                border-left-color: blue;
+                border-bottom-style: dashed;
+                /* border-top-left-radius: 2px;
+                border-top-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-bottom-right-radius: 2px; */
+                border-radius: 20px;
+                border-bottom-left-radius: 0;
+
+                /* Border Shorthand: border-width border-style border-color */
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Borders</h1>
+
+        <div class="border dotted">
+            <h2>Dotted</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+        <div class="border dashed">
+            <h2>Dashed</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+        <div class="border solid">
+            <h2>Solid</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+        <div class="border double">
+            <h2>Double</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+        <div class="border groove">
+            <h2>Groove</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+        <div class="border ridge">
+            <h2>Ridge</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+        <div class="border inset">
+            <h2>Inset</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+        <div class="border outset">
+            <h2>Outset</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error
+            eligendi doloribus ipsa voluptates deserunt quasi quibusdam ducimus enim
+            dolore.
+        </div>
+    </body>
+</html>

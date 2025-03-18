@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Margin and Padding</title>
-</head>
-<body>
-    <h1>Margin and Padding</h1>
-    
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Margin and Padding</title>
+        <style>
+            .parent {
+                background-color: aqua;
+            }
+            .parent .child {
+                background-color: brown;
+                color: white;
+            }
+            .parent {
+                /* Inner Spacing */
+                padding: 20px;
+            }
+            .parent .child {
+                padding: 8px;
+                /* Outside Spacing */
+                margin-bottom: 20px;
+            }
+            .parent .child:last-child {
+                margin-bottom: 0;
+                background-color: green;
+            }
+
+            .parent .child:nth-child(2) {
+                background-color: red;
+            }
+
+            /* Sibling Selector */
+            /* .parent .child ~ .child {
+                background-color: blue;
+            } */
+        </style>
+    </head>
+    <body>
+        <h1>Margin and Padding</h1>
+
+        <div class="parent">
+            <div class="child">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+                saepe! Temporibus nisi beatae omnis vero?
+            </div>
+            <div class="child">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+                saepe! Temporibus nisi beatae omnis vero?
+            </div>
+            <div class="child">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+                saepe! Temporibus nisi beatae omnis vero?
+            </div>
+            <div class="child">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati,
+                saepe! Temporibus nisi beatae omnis vero?
+            </div>
+        </div>
+    </body>
 </html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Flexbox and Grid</title>
+        <style>
+            .box {
+                background-color: chartreuse;
+                padding: 1rem; /* 16px */
+                display: block;
+                height: 400px;
+                position: relative;
+            }
+            .box .child {
+                padding: 8px;
+                background-color: blue;
+                color: white;
+            }
+            .box::after {
+                content: " ";
+                display: block;
+                position: absolute;
+                background-color: red;
+                /* top: 50%;
+                height: 2px;
+                left: 0;
+                right: 0; */
+                left: 50%;
+                width: 2px;
+                top: 0;
+                bottom: 0;
+            }
+
+            /* Visibility: hidden */
+            /* Display: inline, inline-block, block, none*/
+            /* .child2 {
+                display: none;
+            }
+            .child3 {
+                display: inline-block;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            } */
+
+            /* Display: flex */
+            .box {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                align-items: center;
+                justify-content: space-evenly;
+            }
+            .child2 {
+                align-self: flex-end;
+            }
+            .child4 {
+                align-self: flex-start;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 style="position: sticky; top: 0; left: 0; z-index: 10; background-color: blue;">Flexbox and Position</h1>
+
+        <div class="box">
+            <div class="child child1" style="position: absolute; top: 25px; left: 25px">
+                Child 1
+            </div>
+            <div class="child child2">Child 2</div>
+            <div class="child child3">Child 3</div>
+            <div class="child child4">Child 4</div>
+        </div>
+
+        <h1>Flexbox and Position</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum
+            exercitationem assumenda rem labore officiis ipsam illo. Delectus impedit
+            voluptates distinctio veritatis laboriosam, optio placeat assumenda tempora
+            saepe. Laudantium, expedita eaque est ea quod libero nisi voluptate rerum
+            aut voluptates cumque molestiae officia, beatae nesciunt reiciendis ipsam
+            minima officiis corrupti a consequuntur necessitatibus. Quasi itaque rerum
+            maxime doloribus numquam dolor quaerat sunt dolorum perspiciatis soluta
+            delectus quisquam, adipisci modi! Molestiae dolores laudantium architecto,
+            magnam ab, corporis minus ad earum excepturi repudiandae quasi? Dolor
+            maiores dolorem voluptatibus saepe minus voluptatem nam, distinctio et
+            facere ex incidunt consequuntur explicabo vitae accusantium quo corporis
+            minima cupiditate assumenda placeat obcaecati. Sint architecto libero
+            laborum blanditiis aspernatur aperiam molestias sunt suscipit, soluta
+            pariatur dolor rerum eligendi consectetur provident. Dolorum libero
+            veritatis assumenda alias quos id quas pariatur fuga quis, deserunt facilis,
+            minus rerum sapiente! Neque excepturi commodi adipisci, maxime, libero
+            doloremque sint deserunt ipsa, debitis quas minus expedita deleniti iusto
+            non. Voluptatum doloremque dignissimos architecto assumenda, beatae, quia
+            veniam similique nulla quo adipisci provident, neque officiis porro
+            laudantium quos! Sapiente illum accusamus sed commodi delectus quidem eius
+            ex neque est, nam a aliquam soluta at perferendis quaerat, esse doloribus
+            quia maxime ab, voluptatem reprehenderit accusantium! Laboriosam aut vel
+            saepe illo, odit tempore blanditiis sint molestiae quae corrupti earum
+            veniam possimus maiores optio. Hic similique quam vitae quo aliquam?
+            Pariatur ipsa officia provident vitae cumque nam inventore odio temporibus.
+            Reiciendis sequi quas cum debitis nihil molestias facere aliquam quia, esse
+            blanditiis. Eos error natus doloremque iusto id nulla consectetur numquam,
+            ex magni ab ea nemo incidunt perferendis maxime quos sapiente quasi facilis,
+            eveniet nam dolore eaque et quam? Animi ipsa temporibus ipsam nisi,
+            similique hic placeat rem sit iure doloribus voluptatem debitis, odio
+            quisquam non sunt eum nemo at. Maxime odio, labore accusamus quam, saepe
+            molestiae natus fugit at iste ab voluptate dicta quod aliquam consequuntur
+            laboriosam fugiat enim pariatur. Non tempora earum at quisquam dolores
+            adipisci laboriosam similique illo! Ab consectetur qui rem iste placeat.
+            Natus ut adipisci quod iusto rem molestiae, nostrum, cupiditate a eaque
+            debitis temporibus quia facilis unde incidunt quasi inventore! Ab
+            perferendis, id dicta error distinctio praesentium sunt sed quibusdam
+            deleniti quos, ex sint labore. Iure minima fugiat, quos quas beatae unde
+            laborum quasi nam repudiandae reiciendis atque rem excepturi quod
+            voluptatibus obcaecati? Accusantium distinctio adipisci molestiae animi
+            exercitationem mollitia laborum minus consequatur ullam quod sunt quam culpa
+            placeat neque, voluptatibus a fugit vero provident incidunt voluptas. Vitae
+            neque repellendus aliquid distinctio corrupti possimus, delectus odit
+            dolorem modi facilis qui laudantium, fugiat sint harum quasi dignissimos
+            tenetur cumque? Quaerat maiores, assumenda temporibus consequatur
+            consequuntur tempora. Autem libero nam id animi quidem atque dicta non
+            necessitatibus magnam assumenda! Voluptates sit nihil aperiam vero
+            distinctio. Quisquam eum enim, eius temporibus quo aliquam iure distinctio.
+            Maxime, libero error aspernatur voluptates exercitationem provident magni
+            nostrum, inventore dignissimos tempore sapiente labore soluta alias est
+            officia eveniet cupiditate omnis. Saepe possimus quisquam quas in, deleniti
+            rem quibusdam voluptatibus illum dolores. Dolores tenetur sunt repellendus!
+            Quo beatae ratione delectus?
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore maxime
+            deserunt recusandae illum deleniti sapiente magni reiciendis quod dolor
+            harum sunt natus nisi enim aut, quam cum, fugiat ipsa molestias neque culpa
+            dolore? Tempore numquam eum, necessitatibus obcaecati ut quis accusantium
+            accusamus eius sequi illo incidunt culpa. Quae assumenda ratione molestiae
+            perspiciatis porro maiores iste dolorum voluptates dicta id! Sit quis
+            officia voluptas. Officiis, dicta debitis quos similique odio veniam
+            consequatur, reiciendis quo eaque, neque molestiae alias? A exercitationem
+            tempore autem reprehenderit deleniti ipsa quaerat blanditiis porro iusto
+            magni? Minima reprehenderit fugit officia veritatis, non enim? Reprehenderit
+            ea minima tempora temporibus veritatis rerum perferendis sit beatae ad
+            quidem quaerat ratione atque corporis, qui voluptates aperiam hic doloremque
+            corrupti iure consectetur dolore? Iste deserunt, quidem perferendis repellat
+            error hic quis nobis. Mollitia, impedit eligendi reiciendis aspernatur
+            consequuntur hic rerum quidem voluptates minus itaque unde, animi expedita
+            ducimus maxime blanditiis accusantium magni. Asperiores harum id itaque at
+            consequuntur odit nostrum, repellendus fugiat odio officiis quam est magnam
+            illum accusantium ex officia ratione. Architecto nobis tempora, dolorum qui
+            quos eum, nam, magni quo assumenda vitae enim sit veniam doloribus rem
+            commodi voluptate cumque maiores dignissimos nostrum. Culpa non impedit
+            obcaecati ex praesentium magni cupiditate, aut assumenda nesciunt, aliquam
+            animi accusantium delectus excepturi ea tempore quia maxime alias
+            laudantium. Quibusdam labore facere esse ipsa modi illo ea magnam pariatur
+            quaerat aspernatur, maxime cupiditate unde officia ad ratione laudantium
+            corporis eum debitis voluptates, deserunt non ipsum, nobis molestias. Amet
+            dicta eveniet animi maxime ipsam, in voluptatem reiciendis sit doloremque
+            aut. Aliquid fuga ipsum, rerum, amet totam ad doloribus eligendi accusantium
+            possimus ullam dolorum delectus at enim aliquam soluta illo hic laudantium
+            quasi harum labore ex. Laboriosam tempore dolore voluptatibus dignissimos
+            delectus? Officia sint voluptatibus facilis pariatur dignissimos quam?
+            Voluptatibus quod quidem dolores enim mollitia veniam recusandae eaque
+            obcaecati assumenda beatae praesentium dicta rem distinctio, vitae
+            accusamus! Consequuntur illum iure, voluptatem consectetur incidunt
+            dignissimos ducimus vero reiciendis quas blanditiis doloribus magnam eos
+            eaque enim est nihil corporis molestias voluptatum quidem laboriosam
+            exercitationem voluptatibus! Accusamus maxime atque sint, minima ipsam
+            reiciendis ratione iure dignissimos quaerat doloremque doloribus cum dolor
+            quidem velit harum accusantium eos soluta ut! Laborum, a. Accusantium sequi
+            perspiciatis facere iusto autem quia minus praesentium eius explicabo
+            eveniet repellat delectus consequuntur fugiat, consectetur architecto ea
+            quae iste beatae sunt. Fuga eveniet molestias esse sapiente! Possimus
+            reprehenderit eligendi fuga architecto dolorem quis dolores nemo, non iusto
+            voluptates error porro tenetur, cum ipsam blanditiis eum quae vero dolorum,
+            deserunt voluptatum. Similique mollitia at minima dicta eligendi rerum eius
+            deleniti! Nobis atque ex ducimus id! Eos odio temporibus earum aliquid
+            distinctio. Sed consequuntur temporibus quidem veritatis quos tempore
+            asperiores aliquid esse sit sunt fugiat, accusantium dolor culpa doloremque
+            numquam repellendus tempora ullam molestias, voluptates voluptas magni
+            dignissimos. Iusto animi cumque neque fuga pariatur velit blanditiis
+            architecto facere quas incidunt temporibus totam quidem consectetur
+            mollitia, nam, iste dignissimos nulla in magni natus suscipit reprehenderit
+            perferendis reiciendis voluptatum! Minus neque reprehenderit repellat nihil
+            alias corporis officiis et maxime, porro voluptatum!
+        </p>
+    </body>
+</html>

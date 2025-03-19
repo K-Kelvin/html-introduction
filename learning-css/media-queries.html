@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Media Queries</title>
+        <style>
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            .landing-page {
+                height: 100vh;
+                display: grid;
+                gap: 16px;
+                /* By default, apply this CSS on mobile screens (0 - 425) */
+                grid-template-areas:
+                    "top  top     top     top"
+                    "left left left left"
+                    "content content content content"
+                    "footer footer footer footer";
+                grid-template-rows: 40px 80px auto 40px;
+                grid-template-columns: auto;
+            }
+            .landing-page .child {
+                background-color: blue;
+                color: white;
+            }
+            .child.top {
+                grid-area: top;
+            }
+            .child.left {
+                grid-area: left;
+            }
+            .child.content {
+                grid-area: content;
+            }
+            .child.footer {
+                grid-area: footer;
+            }
+            /* @media (orientation: landscape) {
+                body {
+                    background-color: aqua;
+                }
+            } */
+
+            /* From screen size 426px(min) upwards */
+            @media (min-width: 426px) {
+                .landing-page .child {
+                    background-color: red;
+                }
+            }
+            /* From screen size 769px (min) upwards */
+            @media (min-width: 769px) {
+                .landing-page {
+                    grid-template-areas:
+                        "top  top     top     top"
+                        "left content content content"
+                        "left content content content"
+                        "footer footer footer footer";
+                    grid-template-rows: 40px auto auto 40px;
+                    grid-template-columns: 200px auto;
+                }
+                .landing-page .child {
+                    background-color: green;
+                }
+            }
+
+            /* From screen size 1025px (min) upwards */
+            @media (min-width: 1025px) {
+                .landing-page .child {
+                    background-color: brown;
+                }
+            }
+
+            /* From screen size 0 - 1024px (max), apply this css to the given classes */
+            /* @media (max-width: 425px) {
+                .landing-page .child {
+                    background-color: brown;
+                }
+            } */
+        </style>
+        <!-- <link rel="stylesheet" href="style.css"> -->
+        <!-- External Javascript -->
+        <script src="script.js" defer></script>
+
+        <!-- Internal JS -->
+        <script>
+            // Ensure all the html has loaded before running any Javascript code
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector("nav").onclick = function () {
+                    alert("(Internal JS) Nav Clicked");
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <main class="landing-page">
+            <nav class="child top">Top Navigation</nav>
+
+            <aside class="child left">Left Nav</aside>
+
+            <div class="child content">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio magni
+                    molestias quisquam ex quo. At error natus corporis eveniet, qui
+                    obcaecati, magnam ea fugiat reiciendis reprehenderit a, animi
+                    praesentium totam provident labore impedit. Dolor, nobis, mollitia
+                    excepturi molestias blanditiis aperiam in ullam aspernatur aliquid,
+                    nemo officiis nisi molestiae assumenda porro!
+                </p>
+            </div>
+            <div class="child footer">Footer</div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grid</title>
+        <style>
+            .box {
+                background-color: chartreuse;
+                padding: 1rem; /* 16px */
+                display: block;
+                height: 400px;
+                position: relative;
+                margin-bottom: 40px;
+            }
+            .box .child {
+                padding: 8px;
+                background-color: blue;
+                color: white;
+            }
+            /* Display: grid */
+            .box {
+                display: grid;
+                gap: 16px;
+                /* Parent */
+                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: auto;
+            }
+            .child1 {
+                /* grid-column-start: 1;
+                grid-column-end: 5; */
+                /* end - start */
+                /* 5 - 1 = 4 */
+                /* grid-column: span 6; */
+            }
+            .child2 {
+                /* Child */
+                grid-column: span 4;
+                grid-row: span 4;
+            }
+
+            .landing-page {
+                background-color: chartreuse;
+                height: 400px;
+                display: grid;
+                gap: 16px;
+                grid-template-areas:
+                    "top  top     top     top"
+                    "left content content content"
+                    "left content content content"
+                    "footer footer footer footer";
+                grid-template-rows: 40px auto auto 40px;
+                grid-template-columns: 200px auto;
+            }
+            .landing-page .child {
+                background-color: blue;
+                color: white;
+            }
+            .child.top {
+                grid-area: top;
+            }
+            .child.left {
+                grid-area: left;
+            }
+            .child.content {
+                grid-area: content;
+            }
+            .child.footer {
+                grid-area: footer;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grid</h1>
+
+        <div class="box">
+            <div class="child child1">Child 1 (R1, C1)</div>
+            <div class="child child2">Child 2 (R1, C2)</div>
+            <div class="child child3">Child 3</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+            <div class="child child4">Child 4</div>
+        </div>
+
+        <div class="landing-page">
+            <div class="child top">Top Navigation</div>
+            <div class="child left">Left Nav</div>
+            <div class="child content">
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio magni
+                    molestias quisquam ex quo. At error natus corporis eveniet, qui
+                    obcaecati, magnam ea fugiat reiciendis reprehenderit a, animi
+                    praesentium totam provident labore impedit. Dolor, nobis, mollitia
+                    excepturi molestias blanditiis aperiam in ullam aspernatur aliquid,
+                    nemo officiis nisi molestiae assumenda porro!
+                </p>
+            </div>
+            <div class="child footer">Footer</div>
+        </div>
+    </body>
+</html>

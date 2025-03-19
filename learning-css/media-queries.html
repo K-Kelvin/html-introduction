@@ -45,6 +45,10 @@
                 }
             } */
 
+            .hidden {
+                display: none;
+            }
+
             /* From screen size 426px(min) upwards */
             @media (min-width: 426px) {
                 .landing-page .child {
@@ -86,22 +90,26 @@
         <script src="script.js" defer></script>
 
         <!-- Internal JS -->
-        <script>
+        <!-- <script>
             // Ensure all the html has loaded before running any Javascript code
             document.addEventListener("DOMContentLoaded", function () {
                 document.querySelector("nav").onclick = function () {
                     alert("(Internal JS) Nav Clicked");
                 };
             });
-        </script>
+        </script> -->
     </head>
     <body>
         <main class="landing-page">
             <nav class="child top">Top Navigation</nav>
 
-            <aside class="child left">Left Nav</aside>
+            <aside class="child left">
+                Left Nav
+                <button id="toggleContent">Toggle Content</button>
+            </aside>
 
-            <div class="child content">
+            <div class="child content" id="content">
+                Direct child text content
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio magni
                     molestias quisquam ex quo. At error natus corporis eveniet, qui

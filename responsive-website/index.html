@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Responsive and Interactive Website</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <main class="landing-page">
+            <nav class="child top">
+                <a href="#" class="logo">Site Name</a>
+
+                <button id="toggle-menu">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-menu"
+                    >
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                        <line x1="4" x2="20" y1="6" y2="6" />
+                        <line x1="4" x2="20" y1="18" y2="18" />
+                    </svg>
+                </button>
+            </nav>
+
+            <aside class="child left hiddenn">
+                <!-- <div class="overlay">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-x"
+                    >
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </div> -->
+                <button onclick="closeNavigationMenu()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        class="lucide lucide-x"
+                        id="close-icon"
+                    >
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </button>
+                <div class="links">
+                    <a href="#">Home</a>
+                    <a href="#">Feed</a>
+                    <a href="#">Account</a>
+                    <a href="#">Settings</a>
+                </div>
+            </aside>
+
+            <div class="child content" id="content">
+                <h1>Responsive and Interactive Website</h1>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio magni
+                    molestias quisquam ex quo. At error natus corporis eveniet, qui
+                    obcaecati, magnam ea fugiat reiciendis reprehenderit a, animi
+                    praesentium totam provident labore impedit. Dolor, nobis, mollitia
+                    excepturi molestias blanditiis aperiam in ullam aspernatur aliquid,
+                    nemo officiis nisi molestiae assumenda porro!
+                </p>
+            </div>
+
+            <div class="child footer">
+                <p>&copy; Copyright 2025</p>
+            </div>
+        </main>
+    </body>
+</html>

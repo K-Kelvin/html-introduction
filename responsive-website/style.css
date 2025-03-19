@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.landing-page {
+    height: 100vh;
+    display: grid;
+    gap: 16px;
+    /* By default, apply this CSS on mobile screens (0 - 425) */
+    grid-template-areas:
+        "top  top     top     top"
+        "content content content content"
+        "footer footer footer footer";
+    grid-template-rows: 64px auto 80px;
+    grid-template-columns: auto;
+}
+.landing-page .child {
+    background-color: brown;
+    color: white;
+}
+.child.top {
+    grid-area: top;
+}
+.child.left {
+    grid-area: left;
+}
+.child.left.hidden {
+    display: none;
+}
+.child.content {
+    grid-area: content;
+}
+.child.footer {
+    grid-area: footer;
+}
+
+/* Top Navigation */
+nav.top {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav.top .logo {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+nav.top #toggle-menu {
+    display: block;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, .25);
+    padding: 6px;
+    padding-bottom: 4px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+nav.top #toggle-menu svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Content */
+#content {
+    padding: 16px;
+}
+#content h1 {
+    margin-bottom: 16px;
+}
+#content p {
+    line-height: 1.5;
+    font-size: 18px;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+
+/* Footer */
+.footer {
+    padding: 16px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Left Navigation */
+aside.left .links {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+/* For smaller screens */
+@media (max-width: 768px) {
+    aside.left {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        /* width: 320px; */
+        z-index: 999;
+        background-color: rgba(0, 0, 0, .6) !important;
+    }
+    aside.left button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 40px;
+        width: 40px;
+        height: 40px;
+        color: white;
+        border: none;
+        background: none;
+    }
+    aside.left button svg {
+        width: 40px;
+        height: 40px;
+    }
+    aside.left .links {
+        width: 320px;
+        background-color: brown !important;
+        height: 100%;
+    }
+    /* aside.left .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, .75);
+        z-index: -1;
+    } */
+    /* aside.left .overlay svg {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+    } */
+}
+aside.left a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    background-color: rgba(255, 255, 255, .05);
+    border-radius: 6px;
+    font-weight: 600;
+}
+aside.left a:hover {
+    background-color: rgba(255, 165, 0, 0.75);
+}
+
+/* From screen size 769px (min) upwards */
+@media (min-width: 769px) {
+    .landing-page {
+        grid-template-areas:
+            "top  top     top     top"
+            "left content content content"
+            "left content content content"
+            "footer footer footer footer";
+        grid-template-rows: 64px auto auto 40px;
+        grid-template-columns: 360px auto;
+    }
+    .child.left.hidden {
+        display: flex;
+    }
+
+    nav.top #toggle-menu {
+        display: none;
+    }
+
+    aside.left .overlay {
+        display: none;
+    }
+}

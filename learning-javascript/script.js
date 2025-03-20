@@ -151,8 +151,8 @@ names[1] = "Mary Jane";
 // console.log(typeof names);
 
 // names.sort();
-names.push('New Name'); // adds new item at the end
-console.log(names);
+names.push("New Name"); // adds new item at the end
+// console.log(names);
 // console.log(names[0]); // first item
 // console.log(names[names.length - 1]); // last item
 
@@ -185,7 +185,6 @@ function myFunction(name, age) {
 //     console.log("My name is " + name + ", I am " + age + " years old.");
 // })("John", 50);
 
-
 /* Output in Javascript */
 // JS in Browser
 // document (Manipulate the HTML Document -> DOM)
@@ -196,3 +195,162 @@ function myFunction(name, age) {
 // JS outside Browser -> nodejs, denojs
 // document and methods linked to document NOT SUPPORTED
 // console.log() // -> Prints content on the Terminal, Command Prompt
+
+function calculateTotal(num1, num2) {
+    const total = num1 + num2;
+    return total;
+}
+
+const total_ = calculateTotal(3, 4);
+// console.log(total_);
+
+/* Dates in Javascript */
+const dateNow = new Date();
+// document.writeln(dateNow.getFullYear());
+// dateNow.setFullYear(2030);
+
+// document.writeln(dateNow.getFullYear());
+// document.writeln(dateNow.toISOString());
+
+const someDate = "2025-02-14T08:30:00.000Z";
+// Display above date into user's local time
+const localDate = new Date(someDate);
+// document.writeln(`${localDate.getDate()}-${localDate.getMonth()+1}-${localDate.getFullYear()}`)
+
+// document.writeln(
+//     dayjs(localDate).format('DD-MMMM-YYYY HH:mm A')
+// );
+
+/* Control Structures */
+
+// Selection/Conditional Structures
+const userAge = 20;
+if (userAge < 18) {
+    // document.writeln("You are still young!<br>");
+} else {
+    // document.writeln("Welcome, honourable member!<br>");
+}
+
+const marks = 65;
+let grade;
+
+if (marks >= 80) {
+    grade = "A";
+} else if (marks >= 70) {
+    grade = "B";
+} else if (marks >= 60) {
+    grade = "C";
+} else if (marks >= 50) {
+    grade = "D";
+} else {
+    grade = "E";
+}
+
+// document.writeln('Grade = ' + grade);
+
+const period = "evening";
+switch (period) {
+    case "morning":
+        // document.writeln('Good morning<br>');
+        break;
+    case "afternoon":
+        // document.writeln('Good afternoon<br>');
+        break;
+    case "evening":
+        // document.writeln('Good evening<br>');
+        break;
+    default:
+        // document.writeln('Invalid input "period"<br>');
+        break;
+}
+
+// Iterative/Repetitive/Looping Control Structures
+const cars = ["BMW", "Audi", "Tesla", "Ferrari", "Range Rover", "Mini Cooper"];
+//           [  0  ,   1   ,    2   ,     3    ,        4     ,     5        ]
+
+// 0 - 5 (6)
+// for (let index = 0; index < cars.length; index++) {
+//     const car = cars[index];
+//     // document.writeln(car + '<br>');
+//     console.log(index, car)
+// }
+
+// for...of -> iterables (arrays, strings, sets)
+// for (let car of cars) {
+//     console.log(car);
+// }
+
+// for...in -> objects
+// for (let key in car) {
+//     const value = car[key];
+//     console.log(`${key}=${value}`);
+// }
+
+// Loop 1: (index = 0)
+// Set index to 0
+// Check condition: is 0 < 5 ? 'Execute the block of code': 'Exit for loop'
+// Increment the index: index = index + 1
+
+// Loop 2: (index = 1)
+// Check condition: is 1 < 5 ? 'Execute the block of code': 'Exit for loop'
+// Increment the index: index = index + 1
+
+// Loop 3: (index = 2)
+// Check condition: is 2 < 5 ? 'Execute the block of code': 'Exit for loop'
+// Increment the index: index = index + 1
+//
+// Loop 4: (index = 3)
+// Check condition: is 3 < 5 ? 'Execute the block of code': 'Exit for loop'
+// Increment the index: index = index + 1
+//
+// Loop 5: (index = 4)
+// Check condition: is 4 < 5 ? 'Execute the block of code': 'Exit for loop'
+// Increment the index: index = index + 1
+//
+// Loop 6: (index = 5)
+// Check condition: is 5 < 5 ? 'Execute the block of code': 'Exit for loop'
+// Exit the loop
+
+// While Loop
+// let index = 0;
+// while (index < cars.length) {
+//     const car = cars[index];
+//     document.writeln(car + '<br>');
+
+//     index++;
+// }
+// document.writeln('Exited<br>');
+
+/*
+Write a program that randomly selects 2 numbers
+calculates and outputs the total of the two numbers
+Randomly decide if the program should terminate
+*/
+
+let numA;
+let numB;
+let isRunning = true;
+// while (isRunning) {
+//     // Get the input from the user
+//     // numA = prompt("Enter first number: ");
+//     // numB = prompt("Enter second number: ");
+
+//     numA = Math.floor(Math.random() * 101); // Random number between 0 and 100
+//     numB = Math.floor(Math.random() * 101); // Random number between 0 and 100
+
+//     const total = numA + numB; // calculate the total
+//     console.log(`${numA} + ${numB} = ${total}`);
+//     console.log();
+
+//     // Randomly Check if the program should exit
+//     let shouldExit = Math.random() < 0.1; // 20% probability to exit
+//     if (shouldExit) {
+//         isRunning = false;
+//         break;
+//     }
+// }
+
+// do {
+//     // Get Input
+//     // Do something with the input
+// } while (10 < 20);
